@@ -1,0 +1,755 @@
+@font-face {
+    font-family: ArnoBold;
+    src: url(../fonts/ArnoPro-BoldCaption.otf);
+}
+
+@font-face {
+    font-family: ArnoReg;
+    src: url(../fonts/ArnoPro-Regular.otf);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+body{
+    font-family: ArnoBold, 'Crimson Text', serif;
+    font-size: 16px;
+    transition: background-color .5s;
+    background-image: url(../img/bgtexture.jpg);
+    margin: 0;
+    padding: 0;  
+}
+#topNav {
+    width: 100%;
+    height: 2.5em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(227,105,38);
+    box-shadow: 0 4px 4px -3px #232323;
+    -moz-box-shadow: 0 4px 4px -3px #232323;
+    -webkit-box-shadow: 0 4px 4px -3px #232323;
+    transition: all 0.4s ease-in-out;
+    padding-top: 0px;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation ul {
+    margin-top: 0.3em;
+    text-align:center;
+    list-style:none; 
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+.menulist {
+    width: 53.3333333%; 
+    height: 10em;
+}
+
+.line1, .line2, .line3 {
+  margin-top: 0.1em;
+  background-color:rgb(255,254,233);
+  width: 100%; /*25px*/
+  height: 0.1em;
+  display:block;
+  position:relative;
+  opacity:1.0;
+  border-radius:15%;
+  transition: all .3s;
+}
+
+.line1.active {
+  transform: rotate(270deg);
+  opacity:0.0;
+  background-color:rgb(255,254,233);
+  top:0.2em;
+}
+
+.line2.active {
+  transform: rotate(45deg);
+  background-color:rgb(255,254,233);
+}
+
+.line3.active {
+  transform: rotate(-45deg);
+  background-color:rgb(255,254,233);
+  top:-0.2em;
+}
+
+.menuitems {
+    padding: 0.5em 0;
+    margin: 0;
+    text-decoration: none;
+    list-style:none; 
+    font-family: ArnoBold, 'Crimson Text', serif;
+    font-weight: 100;
+    font-size: 1em;
+    position:relative;	
+    text-align:center;
+    color: rgb(255,254,233);
+    display: none;
+    transition: all .5s ease-in-out;
+}
+
+.menuitems:after {
+  content:'';
+  display:block;
+  width: 0;
+  height: 0.05em;/*1px*/
+  background: rgb(255,254,233);
+  transition: width .2s;
+}
+
+.menuitems:hover::after {
+    width:100%;
+}
+
+#closebtn {
+    height:1.5625em;/*25px*/
+    width:10%;
+    position: absolute;
+    text-decoration:none;
+    top: 0.1em; /*10px*/
+    left: 6.66666666667%; /*25px*/
+    font-size: 2.25em !important;
+    margin-right: 13.3333333%; /*50px*/
+    z-index:100;
+    color:rgb(255,254,233);
+    cursor:pointer;
+    transition:background-position .3s;
+}
+header{
+    width: 100%;
+}
+#main {	
+    transition: margin-top .4s;
+    text-align:center;
+    width: 100%;
+}
+#banner{
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 8.5em;
+}
+.logo img{
+    width: 30%;
+    float: left;
+    margin-left: 12%;
+    margin-top: 1em;
+    -webkit-filter: drop-shadow(1px 1px 3px #555);
+    filter: drop-shadow(1px 1px 3px #555);
+}
+h1{
+    float: left;
+    padding: 0;
+    margin: 1.2em 8% 0 -3%;
+    font-size: 2em;
+    line-height: 0.8em;
+    color: rgb(227, 105, 38);
+    letter-spacing: 0.003em;
+    text-shadow: 1px 1px 3px #555;
+}
+h4{
+    clear: left;
+    padding: 0.3em 0 0 0;
+    margin: 0;
+    font-size: 0.9em;
+    color: rgb(100,100,100);
+    font-family: ArnoBold, 'Crimson Text', serif;
+}
+.randc{
+    width: 100%;
+    margin: 0 auto;
+    height: 8em;
+    overflow: hidden;
+}
+.icon{
+    width: 20%;
+    float: left;
+    margin-top: 2.5em;
+}
+#dinebox, #cookbox{
+    background-image: url(../img/dine.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.9;
+    width: 72%;
+    height: 7em;
+    float: left;
+    margin: 0.8em 0 0 5%;
+    text-align: center;
+}
+#cookbox{
+    background-image: url(../img/cook.png);
+}    
+h5{
+    color: rgb(255,254,233);
+    font-size: 0.9em;
+    text-shadow: 5px 5px 15px #555;
+    font-family: ArnoReg, 'Crimson Text', serif;
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+#cookbox h5{
+    width: 70%;   
+    margin: 2em auto 0;
+    line-height: 0.8em;
+}
+#showButton1, #showButton2{
+    border: none;
+    background-color: rgba(227, 105, 38, 0.8);
+    color: rgb(255,254,233);
+    font-family: ArnoReg, 'Crimson Text', serif;
+    font-size: 0.8em;
+    padding: 0.2rem 6% 0.1rem;
+    margin-top: 0.5em;
+    box-shadow: 0px 2px 2px #333;
+    z-index: 1000;
+}
+#closeButton1, #closeButton2{
+    font-size: 0.8em;
+    font-family: sans-serif;
+    position: relative;
+    left: 90%;
+    margin: 0;
+    color: rgb(227, 105, 38);
+    background-color: rgba(227, 105, 38, 0);
+    padding: 0 3%;
+    border-radius: 50%;
+    border: 0.05em solid rgb(227, 105, 38);
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+#hiddenPanel1 p, #hiddenPanel2 p{
+    color: #4A4A4A;
+    background-color: rgba(255,255,255,0.9);
+    padding: 0.5em 0 0 5%;
+    font-family: ArnoReg, 'Crimson Text', serif;
+    font-size: 0.8em;
+    border-radius: 8px;
+    width: 68%;
+    position: absolute;
+    bottom: 25.6em;
+    margin: 0 auto;
+    text-align: left;
+}
+#hiddenPanel2 p{
+    bottom: 14.3em;
+}
+hr{
+    height: 0.05em;
+    border: 0;
+    background-image: linear-gradient(to right, rgba(227, 105, 38, 0), rgba(227, 105, 38, 0.9), rgba(227, 105, 38, 0));
+    z-index: 1000;
+    margin: 0.5em 0;
+    padding: 0;
+}
+#h2wrapper{
+        display: none;
+
+}
+h2{
+    color: rgb(227, 105, 38);
+    font-size: 1.5em;
+    padding: 3%;
+    margin: 0;
+}
+#video{
+    height: auto;
+}
+#youtube{
+    width: 95%; 
+    margin: 0 auto 1.5em;
+}
+figure iframe{
+   width: 100%;
+   height: 11.5em;
+}
+#contact{
+    width: 90%;
+    height: 35em;
+    margin: 0 auto;
+}
+#contact h2{
+    width: 100%;
+    text-align: right;
+    font-size: 2em;
+    display: block;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+}
+#contactlist{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+#contactlist li{
+    display: block;
+    color: rgb(227, 105, 38);
+    width: 80%;
+    height: 1em;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.8em;
+    clear: left;
+}
+i{
+    float: left;
+    padding: 0.5em 15% 0 0;
+    margin: 0;
+    color: rgb(227, 105, 38);
+}
+#phone, #marker{
+    margin-left: 2%;
+}
+h3{
+    font-size: 0.6em;
+    font-family: ArnoReg, 'Crfimson Text', serif;
+    margin: 0;
+    padding: 1em 0;
+    float: left;
+}
+.forTab{
+    display: none;
+}
+#map{
+    height: 12em;
+    width: 100%;
+    padding-top: 2em;
+    margin: 0 auto;
+}
+footer{
+    width: 100%;
+    height: 5em;
+    margin: 0 auto;
+    padding: 0;
+/*
+    position: relative;
+    bottom: 3em;
+*/
+}
+#socialwrap{
+    width: 100%;
+    height: 3em;
+    margin: 0 auto;
+}
+#social{
+    list-style: none;
+    margin: 0 auto;
+}
+#social li{
+    display: inline-block;
+    padding: 0 8% 0 0;
+    margin: 0;
+}
+#social li i{
+    font-size: 2em;
+    margin: 0;
+}
+footer p{    
+    width: 100%;
+    margin: 1em auto 0;
+    color: rgb(150, 150, 150);
+    font-size: 0.8em;
+    font-family: ArnoReg, 'Crfimson Text', serif;
+    text-align: center;
+}
+
+/* bigger phone like iphone6+ */
+@media (min-width : 321px) and (max-width : 414px) {
+    #banner{
+        height: 10.5em;
+    }
+    h1{
+        margin-top: 1.8em;
+    }
+    .randc{
+        width: 90%;
+    }
+    #dinebox, #cookbox{
+        background-size: cover;
+        width: 70%;
+        height: 8em;
+    }
+    #hiddenPanel1 p, #hiddenPanel2 p{
+        width: 58%;
+        bottom: 23.1em;
+    }
+    #hiddenPanel2 p{
+        bottom: 13em;
+    }
+    figure iframe{
+        height: 12em;
+    }
+    #social li{
+        padding: 0 5%;
+    }
+}
+
+/* smaller tablet */
+@media (min-width : 415px) and (max-width : 768px) {
+    body{
+        font-size: 28px;
+    }
+    .line1, .line2, .line3 {
+        height: 0.06em;
+        margin-top: 0.06em;
+    }
+    #closebtn {
+        width: 5%;
+    }
+    .menuitems{
+        font-size: 0.8em;
+        padding: 0.2em 0;
+    }
+    #banner{
+        height: 7em;
+    }
+    .logo img{
+        width: 20%;
+        margin-left: 25%;
+        margin-top: 1.2em;
+    }
+    h1{
+        font-size: 1.5em;
+        margin-top: 1.5em;
+        margin-left: 0;
+    }
+    h4{
+        font-size: 0.7em;
+    }
+    #hiddenPanel1 p, #hiddenPanel2 p{
+        bottom: 10em;
+        font-size: 0.7em;
+        width: 65%;
+    }
+    #hiddenPanel2 p{
+        bottom: -3.3em;
+    }
+    figure iframe{
+        max-width: 100%;
+    }
+    #contactlist li {
+        font-size: 1.4em;
+    }
+    
+    #social{
+        margin-left: 11%;
+    }
+    #social li i{
+    font-size: 1.5em; 
+    }
+    footer p{
+        font-size: 0.5em;
+        padding: 0;
+        margin: 0 auto;
+        width: 85%;
+    }
+}
+/* bigger tablet */
+@media (min-width : 662px) and (max-width : 768px) {
+    #banner{
+        height: 9em;
+    }
+    .logo img{
+        width: 25%;
+        margin-left: 20%;
+    }
+    h1{
+        font-size: 2em;
+        margin: 1.5em 0 0 0;
+    }
+    h4{
+        font-size: 0.7em;
+        padding: 0;
+    }
+    .two-col{
+        width: 50%;
+        float: left;
+        height: 12em;
+    }
+    .icon{
+        float: none;
+        width: 40%;
+        margin: 0 30%;
+        padding: 0.5em 0 0 0;
+    }
+    #dinebox, #cookbox{
+        width: 90%;
+        margin: 0 5%;
+        padding: 0;
+    }
+    #hrone{
+        display: none;
+    }
+    #hrtwo{
+        clear: left;
+    }
+    #hiddenPanel1 p, #hiddenPanel2 p{
+        width: 40%;
+        bottom: 1.2em;
+        font-size: 0.6em;
+    }
+    #hiddenPanel2 p{
+        bottom: 1.6em;
+        padding-bottom: 0.8em;
+    }
+    #video{
+        width: 100%;
+    }
+    figure iframe{
+        max-width: 100%;
+    }
+    h2{
+        width: 45%;
+        display: block;
+        float: left;
+    }
+    #youtube{
+        width: 45%;
+        padding: 1em 2% 0;
+        float: left;
+        display: block;
+    }
+    #contact{
+        height: 18.5em;
+    }
+    #contact h2{
+        text-align: left;
+    }
+    #contactlist{
+        width: 50%;
+        height: 14em;
+        margin: 0;
+        float: left;
+    }
+    #contactlist li {
+        width: 100%;
+        margin: 0;
+        font-size: 1.6em;
+        display: block;
+    }
+    i{
+        padding: 0 4.5%;
+        margin-top: 0.5em;
+        margin-right: 5%;
+        float: left;
+    }
+    h3{
+        font-size: 0.5em;
+        padding: 1.5em 0 0.5em;
+        margin: 0;
+        float: left;
+    }
+    .forTab{
+        display: inline;
+    }
+    #phone{
+        margin-left: 0;
+    }
+    #map{
+        width: 50%;
+        float: left;
+        margin: 2.5em 0 0 0;
+        padding: 0;
+    }
+    footer{
+        height: 3.5em;
+    }
+    #socialwrap{
+        height: 2em;
+    }
+    #social{
+        margin-left: 22.5%;
+    }
+    footer p{
+        padding: 0;
+        margin: 0  auto;
+        width: 65%;
+    }
+}
+/* Desktops and laptops ----------- */
+@media (min-width : 769px) {
+    body{
+        font-size: 32px;
+    }
+    #closebtn{
+        display: none;
+        height: 0;
+    }
+    #topNav{
+        background-color: rgba(255,254,233, 0.2);
+        box-shadow: 0 1px 3px #CCC;
+    }
+    .navigation ul{
+        margin: 0 0 0 3%;
+        padding: 0;
+    }    
+    .menulist{
+        width: 70%;
+    }    
+    .menuitems{
+        display: inline;
+        color: rgb(227,105,38);
+        float: left;
+        font-size: 0.7em;
+        padding: 0 3%;
+        margin: 0;
+        font-family: ArnoBold, 'Crimson Text', serif;
+        font-weight: lighter;
+    }
+    .menuitems:after {
+        background: rgb(227,105,38);
+        height: 0.1em;
+    }
+    #main{
+        margin: 0;
+        padding: 0;
+        height: 12em;
+    }
+    #banner{
+        height: 14em;
+        position: relative;
+        bottom: 2.5em;
+    }
+    .logo img{
+        margin-left: 25%;
+        margin-top: 3em;
+        width: 20%;
+    }
+    h1{
+        font-size: 2em;
+        margin-top: 2.5em;
+        margin-left: -2%;
+    }
+    h4{
+        font-size: 0.7em;
+        padding: 0.5em 0 0 0;
+    }
+    .randc{
+        width: 33.33333333%;
+        float: left;
+        height: 12em;
+    }
+    #hrone, #hrtwo{
+        display: none;
+    }
+    .icon{
+        float: none;
+        width: 40%;
+        margin: 0 30%;
+        padding: 0;
+    }  
+    #h2wrapper{
+        display: block;
+        float: none;
+        width: 70%;
+        margin: 0 15%;
+        padding: 0;
+    }
+    #dinebox, #cookbox{
+        width: 100%;
+        margin: 0 2%;
+        padding: 0;
+        height: 6em;
+        background-size: cover;
+    }
+    h2{
+        display: none;
+    }
+    figure iframe{
+        max-width: 100%;
+        height: 6em;
+        margin: 0.5em 0 0 0;
+    }
+    hr{
+        clear: left;
+    }
+    #showButton1, #showButton2{
+        font-size: 0.5em;
+        padding: 0.1em 6% 0.05em;
+        margin: 0.5em 8% 0 0;
+    }
+    #showButton1{
+        margin-top: 1.5em;
+    }
+    #hiddenPanel1 p, #hiddenPanel2 p{
+        position: relative;
+        font-size: 0.6em;
+        width: 95%;
+        bottom: 8em;
+        padding: 0 2% 1.5em;
+    }
+    #hiddenPanel2 p{
+        padding-bottom: 2.9em;
+    }
+    #contact{
+        height: 18.5em;
+    }
+    #contact h2{
+        text-align: left;
+    }
+    #contactlist{
+        width: 50%;
+        height: 14em;
+        margin: 0;
+        float: left;
+    }
+    #contactlist li {
+        width: 100%;
+        margin: 0;
+        font-size: 1.6em;
+        display: block;
+    }
+    i{
+        padding: 0 4.5%;
+        margin-top: 0.5em;
+        margin-right: 5%;
+        float: left;
+    }
+    h3{
+        font-size: 0.5em;
+        padding: 1.5em 0 0.5em;
+        margin: 0;
+        float: left;
+    }
+    .forTab{
+        display: inline;
+    }
+    #phone{
+        margin-left: 0;
+    }
+    #map{
+        width: 50%;
+        float: left;
+        margin: 2.5em 0 0 0;
+        padding: 0;
+    }
+    footer{
+        height: 3.5em;
+        font-size: 0.7em;
+    }
+    #socialwrap{
+        height: 2em;
+    }
+    #social{
+        margin-left: 30%;
+    }
+    footer p{
+        padding: 1em 0 0 0;
+        margin: 0 auto;
+        width: 80%;
+        font-size: 0.8em;
+        text-align: left;
+    }
+}
