@@ -213,37 +213,34 @@ h5{
     z-index: 1000;
 }
 #closeButton1, #closeButton2{
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-family: sans-serif;
     position: relative;
     left: 90%;
-    margin: 0;
+    margin: 1em 0 0 0;
     color: rgb(227, 105, 38);
     background-color: rgba(227, 105, 38, 0);
-    padding: 0 3%;
+    padding: 0.2em 2%;
     border-radius: 50%;
     border: 0.05em solid rgb(227, 105, 38);
     z-index: 1000;
 }
-
-.hidden {
-    display: none;
+h6{
+    color: rgb(227, 105, 38);
+    font-size: 1.5em;
+    padding: 0 5%;
+    margin: 0;
 }
-#hiddenPanel1 p, #hiddenPanel2 p{
+.iziModal p{
     color: #4A4A4A;
     background-color: rgba(255,255,255,0.9);
-    padding: 0.5em 0 0 5%;
+    padding: 0.3em 5% 1em;
     font-family: ArnoReg, 'Crimson Text', serif;
-    font-size: 0.8em;
+    font-size: 1em;
     border-radius: 8px;
-    width: 68%;
-    position: fixed;
-    bottom: 20em;
-    margin: 0 auto;
+    width: 90%;
     text-align: left;
-}
-#hiddenPanel2 p{
-    bottom: 10em;
+    margin: 0;
 }
 hr{
     height: 0.05em;
@@ -272,6 +269,7 @@ h2{
 figure iframe{
    width: 100%;
    height: 11.5em;
+    border: none;
 }
 #contact{
     width: 90%;
@@ -332,10 +330,6 @@ footer{
     height: 5em;
     margin: 0 auto;
     padding: 0;
-/*
-    position: relative;
-    bottom: 3em;
-*/
 }
 #socialwrap{
     width: 100%;
@@ -363,7 +357,7 @@ footer p{
     font-family: ArnoReg, 'Crfimson Text', serif;
     text-align: center;
 }
-/* iphone6 */
+/* iphone6 and bigger phones */
 @media screen and (min-width : 321px){
     #banner{
         height: 10.5em;
@@ -379,28 +373,11 @@ footer p{
         width: 70%;
         height: 8em;
     }
-    #hiddenPanel1 p, #hiddenPanel2 p{
-        width: 58%;
-        bottom: 18em;
-    }
-    #hiddenPanel2 p{
-        bottom: 6em;
-    }
     figure iframe{
         height: 12em;
     }
     #social li{
         padding: 0 5%;
-    }
-}
-
-/* iphone6 plus */
-@media screen and (min-width : 376px){
-    #hiddenPanel1 p{
-        bottom: 32em;
-    }
-    #hiddenPanel2 p{
-        bottom: 21em;
     }
 }
 /* smaller tablet */
@@ -410,7 +387,13 @@ footer p{
     }
     .line1, .line2, .line3 {
         height: 0.06em;
-        margin-top: 0.06em;
+        margin-top: 0.06em;  
+    }
+    .line2.active{
+        margin-top: 0.06em;   
+    }
+    .line3.active{
+        margin-top: 0.12em;   
     }
     #closebtn {
         width: 5%;
@@ -435,13 +418,11 @@ footer p{
     h4{
         font-size: 0.7em;
     }
-    #hiddenPanel1 p, #hiddenPanel2 p{
-        bottom: 36em;
-        font-size: 0.7em;
-        width: 65%;
+    h6{
+        font-size: 0.8em;
     }
-    #hiddenPanel2 p{
-        bottom: 23em;
+    .iziModal p{
+        font-size: 0.6em;    
     }
     figure iframe{
         max-width: 100%;
@@ -483,7 +464,7 @@ footer p{
     .two-col{
         width: 50%;
         float: left;
-        height: 12em;
+        height: 15em;
     }
     .icon{
         float: none;
@@ -502,15 +483,6 @@ footer p{
     }
     #hrtwo{
         clear: left;
-    }
-    #hiddenPanel1 p, #hiddenPanel2 p{
-        width: 40%;
-        bottom: 31.2em;
-        font-size: 0.6em;
-    }
-    #hiddenPanel2 p{
-        bottom: 31em;
-        padding-bottom: 2em;
     }
     #video{
         width: 100%;
@@ -680,6 +652,7 @@ footer p{
     }
     #youtube{
         width: 100%;
+        height: 6em;
         margin: 0;
         padding: 0.45em 2% 0;
     }
@@ -697,16 +670,6 @@ footer p{
     }
     #showButton1{
         margin-top: 1.5em;
-    }
-    #hiddenPanel1 p, #hiddenPanel2 p{
-        position: relative;
-        font-size: 0.6em;
-        width: 95%;
-        bottom: 8em;
-        padding: 0 2% 1.5em;
-    }
-    #hiddenPanel2 p{
-        padding-bottom: 2.9em;
     }
     #contact{
         height: 18.5em;

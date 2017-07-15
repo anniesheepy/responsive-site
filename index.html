@@ -5,6 +5,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Capilano Heights Chinese Restaurant and Cooking Class</title>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link rel="stylesheet" href="css/iziModal.css"> 
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/cphLogo.png"/>
     <script src="https://use.fontawesome.com/1aee0c5012.js"></script>
@@ -31,7 +32,7 @@
     <div id="main">
             <div id="banner">
                 <div class="logo">
-                    <img src="img/cphLogo.png"/>
+                    <img src="img/cphLogo.png" alt="cph logo">
                 </div>
                 <h1>Capilano<br/>&nbsp;Heights</h1>
                 <h4>Chinese Restaurant&nbsp; | &nbsp;Cooking Class</h4>        
@@ -39,36 +40,44 @@
     </div>    
 </header> 
 <section class="randc two-col" >
-    <img class="icon" src="img/dining.png" alt="dining at Capilano Heights">
+    <img class="icon" id="dine" src="img/dining.png" alt="dining at Capilano Heights">
     <div id="dinebox">
         <h5>Dine in Capilano Heights</h5>
-        <button type="botton" id="showButton1">Learn More</button>
-        <div id="hiddenPanel1" class="hidden">
-            
-            <p><button type="botton"  id="closeButton1">X</button><br/>Serving the neighborhood for over 45 years, Capilano heights is now run by the 3rd generation of the Sun family. Keeping the local favourite western Chinese style food and bringing some new twist from authentic Taiwanese food. Be prepared to rock your tastebuds. </p>
-            
-        </div>
+        <button id="showButton1" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">Learn More</button>      
     </div>
 </section>
-<hr/ id="hrone">
+
+<div id="modal">
+    <button id="closeButton1" data-izimodal-close="" data-izimodal-transitionout="bounceOutDown">X</button><h6>Dine in Capilano Heights</h6>
+    <p>Serving the neighborhood for over 45 years, Capilano heights is now run by the 3rd generation of the Sun family. Keeping the local favourite western Chinese style food and bringing some new twist from authentic Taiwanese food. Be prepared to rock your tastebuds.</p>
+</div> 
+
+<hr id="hrone">
+    
 <section class="randc two-col">
     <img class="icon" id="wok" src="img/cooking.png" alt="cooking with the Drunken Monkey">
     <div id="cookbox">
         <h5>Cook with the Drunken Monkey</h5>
-        <button type="botton" id="showButton2">Learn More</button>
-        <div id="hiddenPanel2" class="hidden">
-            <p><button type="botton"  id="closeButton2">X</button><br/>At cooking with the Drunken Monkey  you will have the opportunity to learn how to cook authentic Chinese food in a fully equipped professional kitchen.  We offer classes for students with any level of experience, from complete beginners to seasoned veterans.</p>
-        </div>
-    </div>  
+        <button id="showButton2" data-izimodal-open="#modal2" data-izimodal-transitionin="fadeInDown">Learn More</button>
+    </div>
 </section>
-<hr/ id="hrtwo">
+
+<div id="modal2" aria-hidden="true" aria-labelledby="modal" role="dialog" class="iziModal" style="z-index: 999; border-radius: 3px; max-width: 600px;">
+    <button id="closeButton2" data-izimodal-close="" data-izimodal-transitionout="bounceOutDown">X</button><h6>Cook with the Drunken Monkey</h6>
+    <p>At cooking with the Drunken Monkey  you will have the opportunity to learn how to cook authentic Chinese food in a fully equipped professional kitchen.  We offer classes for students with any level of experience, from complete beginners to seasoned veterans.</p>
+</div> 
+
+<hr id="hrtwo">
+    
 <section class="randc" id="video">
     <img id="h2wrapper" src="img/tryvideo.png" alt="ready to give it a try?"><h2>Ready to give it a try?</h2>
     <figure id="youtube">
-        <iframe  src="https://www.youtube.com/embed/aZjd5TTG_7k?ecver=1" frameborder="0" allowfullscreen></iframe>
+        <iframe  src="https://www.youtube.com/embed/aZjd5TTG_7k?ecver=1" allowfullscreen></iframe>
     </figure>
 </section>
+    
 <hr/>
+    
 <section id="contact">
     <h2>Contact us</h2>
     <ul id="contactlist">
@@ -81,8 +90,11 @@
     </ul>
     <div id="map"></div>
 </section>
+    
 <br>
+    
 <hr/>
+    
 <footer>
     <div id="socialwrap">
     <ul id="social">
@@ -95,10 +107,12 @@
     </div>
     <p>&copy;2017. “Capilano Heights Chinese Restaurant “ “Drunken Monkey” All trademarks and registered trademarks appearing on this site are the property of their respective owners.</p>
 </footer>
+    
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnt19EJA-bTF9IZ_YE5OEdNUK6AR2Bojg&callback=initMap">
 </script>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="js/iziModal.js" type="text/javascript"></script>
 <script src="js/script.js"></script>
 
 </body>

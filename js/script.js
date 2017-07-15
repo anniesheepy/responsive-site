@@ -44,22 +44,20 @@ function navToggle() {
 
 };
 
-$(function () { // Onload
-    $("#showButton1").click(function () {
-      $("#hiddenPanel1").fadeIn(600);
-    });
-    $("#closeButton1").click(function () {
-       $("#hiddenPanel1").fadeOut(600);
-    });
-    $("#showButton2").click(function () {
-      $("#hiddenPanel2").fadeIn(600);
-    });
-    $("#closeButton2").click(function () {
-       $("#hiddenPanel2").fadeOut(600);
-    });
 
-  });
+$('#modal').iziModal();
+$('#modal2').iziModal();
 
+$(document).on('click', '.trigger', function (event) {
+    event.preventDefault();
+    $('#modal').iziModal('open');
+});
+$(document).on('click', '.trigger', function (event) {
+    event.preventDefault();
+    $('#modal2').iziModal('open');
+});
+
+//map
 function initMap() {
         var uluru = {lat: 49.358462, lng: -123.106562};
         var map = new google.maps.Map(document.getElementById('map'), {
