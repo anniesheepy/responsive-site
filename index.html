@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Capilano Heights Chinese Restaurant and Cooking Class</title>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <link rel="stylesheet" href="css/iziModal.css"> 
@@ -39,15 +39,21 @@
             </div>
     </div>    
 </header> 
+<div id="myModal" class="imgmodal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01" alt="zoom modal image">
+</div>
+    
 <section class="randc two-col" >
     <img class="icon" id="dine" src="img/dining.png" alt="dining at Capilano Heights">
     <div id="dinebox">
         <h5>Dine in Capilano Heights</h5>
-        <button id="showButton1" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">Learn More</button>      
+        <button id="showButton1" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">Learn More</button> 
+        <img src="img/zoom.png" id="zoom1" alt="zoom icon">
     </div>
 </section>
 
-<div id="modal">
+<div id="modal" aria-hidden="true" aria-labelledby="modal" role="dialog" class="iziModal" style="z-index: 999; border-radius: 3px; max-width: 600px;">
     <button id="closeButton1" data-izimodal-close="" data-izimodal-transitionout="bounceOutDown">X</button><h6>Dine in Capilano Heights</h6>
     <p>Serving the neighborhood for over 45 years, Capilano heights is now run by the 3rd generation of the Sun family. Keeping the local favourite western Chinese style food and bringing some new twist from authentic Taiwanese food. Be prepared to rock your tastebuds.</p>
 </div> 
@@ -59,6 +65,7 @@
     <div id="cookbox">
         <h5>Cook with the Drunken Monkey</h5>
         <button id="showButton2" data-izimodal-open="#modal2" data-izimodal-transitionin="fadeInDown">Learn More</button>
+        <img src="img/zoom.png" id="zoom2" alt="zoom icon">
     </div>
 </section>
 

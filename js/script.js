@@ -1,3 +1,4 @@
+// drop-down menu
 var nav = document.getElementById("topNav");
 var main = document.getElementById("main");
 var menu = document.getElementsByClassName("menuitems");
@@ -44,7 +45,7 @@ function navToggle() {
 
 };
 
-
+// text modal
 $('#modal').iziModal();
 $('#modal2').iziModal();
 
@@ -57,6 +58,30 @@ $(document).on('click', '.trigger', function (event) {
     $('#modal2').iziModal('open');
 });
 
+
+
+
+//img modal
+var modal = document.getElementById('myModal');
+var zoom = document.getElementById('zoom1');
+var zoom2 = document.getElementById('zoom2');
+var modalImg = document.getElementById("img01");
+zoom1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/dinebig.jpg";
+}
+zoom2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = "img/cookbig.jpg";
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+    
+    
+    
 //map
 function initMap() {
         var uluru = {lat: 49.358462, lng: -123.106562};
