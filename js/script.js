@@ -3,11 +3,14 @@ var nav = document.getElementById("topNav");
 var main = document.getElementById("main");
 var menu = document.getElementsByClassName("menuitems");
 var close = document.getElementById("closebtn");
+var i = 0;
 
 //default to measure if/else from
 nav.style.height = "2.5rem";
 main.style.marginTop = "2.5rem";
-for (i = 0; i < menu.length; i++){menu[i].style.marginTop="1rem";};
+for (i = 0; i < menu.length; i++) {
+    menu[i].style.marginTop = "1rem";
+}
 
 close.addEventListener("click", function(){
   var menuIcon = close.children;
@@ -48,6 +51,15 @@ function navToggle() {
 // text modal
 $('#modal').iziModal();
 $('#modal2').iziModal();
+
+if (window.matchMedia("(min-width: 1366px)").matches) {
+    $('#modal').iziModal('setWidth', '70%');
+    $('#modal2').iziModal('setWidth', '70%');
+}else{
+    $('#modal').iziModal('setWidth', 600);
+    $('#modal2').iziModal('setWidth', 600);
+}
+
 
 $(document).on('click', '.trigger', function (event) {
     event.preventDefault();
